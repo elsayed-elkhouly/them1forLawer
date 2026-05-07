@@ -1,12 +1,34 @@
+"use client";
 import Link from 'next/link';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaSearch, FaBars, FaChevronDown } from 'react-icons/fa';
 const NavBar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <nav className="bg-black px-8 py-4 flex items-center justify-between border-b border-zinc-800">
-      {/* Logo */}
-      <div className="flex items-center gap-2">
-        <div className="text-[var(--therdcolor)] text-3xl">⚖️</div>
+   <nav
+      className={`fixed top-0 left-0 w-full z-50 px-8 py-4 flex items-center justify-between transition-all duration-300 ${
+        scrolled
+          ? "bg-[#111111] shadow-lg"
+          : "bg-transparent"
+      }`}
+    >      <div className="flex items-center gap-2">
+        <div className="text-(--therdcolor) text-3xl">⚖️</div>
         <div className="flex flex-col text-white">
           <span className="text-2xl font-bold tracking-widest">ENSAF</span>
           <span className="text-[10px] tracking-[0.2em] opacity-80">JUSTICE LAW</span>

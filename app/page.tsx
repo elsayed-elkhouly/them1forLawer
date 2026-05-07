@@ -7,6 +7,7 @@ import bg5 from '../public/ede1b7d10d8859f102445bc817be8806da250fe1.png';
 import { FaGavel, FaUsers, FaBriefcase, FaStethoscope, FaUserInjured, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import { PiGavelFill } from "react-icons/pi";
 import { FiCalendar, FiUser, FiCheckCircle, FiEye, FiEdit3, FiMapPin, FiPhone, FiMail, FiSend } from 'react-icons/fi';
+import Footer from "./_Components/Footer";
 export default function Home() {
   const steps = [
     {
@@ -558,72 +559,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <footer className="bg-[#0a1a1a] text-white pt-16 pb-8 px-6">
-        <div className="max-w-7xl mx-auto">
 
-          {/* الشريط العلوي: معلومات الاتصال */}
-          <div className="grid md:grid-cols-3 gap-8 pb-12 border-b border-white/10 mb-12">
-            <div className="flex items-center gap-4">
-              <div className="bg-[#1e3a3a] p-2 rounded-full cursor-pointer ">
-                <FiMapPin className="text-[#c5a059] text-2xl" />
-
-              </div>
-              <div>
-                <h4 className="font-bold">Location</h4>
-                <p className="text-gray-400 text-sm">371 7th Ave, New York, NY 10001</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4"><div className="bg-[#1e3a3a] p-2 rounded-full cursor-pointer "><FiPhone className="text-[#c5a059] text-2xl" /> </div><div><h4 className="font-bold">Phone</h4><p className="text-gray-400 text-sm">+152-6485-5467 <br /> +152-6485-5467</p></div></div>
-            <div className="flex items-center gap-4"><div className="bg-[#1e3a3a] p-2 rounded-full cursor-pointer "><FiMail className="text-[#c5a059] text-2xl" /> </div><div><h4 className="font-bold">Email</h4><p className="text-gray-400 text-sm">Enfo@ensaf.com <br /> Enfo@ensaf.com</p></div></div>
-          </div>
-
-          {/* المحتوى الرئيسي */}
-          <div className="grid md:grid-cols-4 gap-12 mb-16">
-            {/* العمود 1: الشعار والوصف */}
-            <div className="space-y-4">
-              <h2 className="text-2xl font-bold">ENSAF</h2>
-              <p className="text-gray-400 text-sm leading-relaxed">Ensaf is a Saudi Arabian law firm founded in 1982. They offer a wide range of legal services, including corporate law, commercial law.</p>
-              <div className="flex gap-2">
-                {[FaFacebookF, FaTwitter, FaYoutube, FaLinkedinIn].map((Icon, i) => (
-                  <div key={i} className="bg-[#1e3a3a] p-2 rounded-full cursor-pointer hover:bg-[#c5a059] transition"><Icon size={14} /></div>
-                ))}
-              </div>
-            </div>
-
-            {/* العمود 2: Pages */}
-            <div>
-              <h3 className="font-bold text-lg mb-6">Pages</h3>
-              <ul className="text-gray-400 space-y-3 text-sm">
-                {['About Us', 'Our Blog', 'Our Team', 'Contact Us', 'Pricing Plans', 'Testimonials'].map(item => <li key={item} className="hover:text-[#c5a059] cursor-pointer">{item}</li>)}
-              </ul>
-            </div>
-
-            {/* العمود 3: Services */}
-            <div>
-              <h3 className="font-bold text-lg mb-6">Services</h3>
-              <ul className="text-gray-400 space-y-3 text-sm">
-                {['Family Practice', 'Free Consultation', 'Criminal Affair', 'Corporate law', 'Real Estate Law', 'Healthy Care Policy'].map(item => <li key={item} className="hover:text-[#c5a059] cursor-pointer">{item}</li>)}
-              </ul>
-            </div>
-
-            {/* العمود 4: Newsletter */}
-            <div>
-              <h3 className="font-bold text-lg mb-6">Newsletter</h3>
-              <p className="text-gray-400 text-sm mb-4">Feel free to reach out if you want to collaborate with us.</p>
-              <div className="relative">
-                <input type="email" placeholder="Email Address" className="w-full bg-[#1e3a3a] border-none rounded-lg p-3 text-sm focus:ring-1 focus:ring-[#c5a059]" />
-                <button className="absolute right-2 top-2 bg-[#c5a059] p-2 rounded-md"><FiSend /></button>
-              </div>
-            </div>
-          </div>
-
-          {/* الشريط السفلي */}
-          <div className="text-center pt-8 border-t border-white/10 text-gray-500 text-sm">
-            Copyright © 2024 Ensaf. All Rights Reserved.
-          </div>
-        </div>
-      </footer>
-
+      
 
 
     </>
